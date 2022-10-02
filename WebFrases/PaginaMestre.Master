@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMestre.master.cs" Inherits="WebFrases.PaginaMestre" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Back-End Frases</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="CSS/Estilo.css" rel="stylesheet" />
+    <script type="text/javascript" src="JavaScriptFunctions.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/IMAGENS/SISTEMAS/topocurso.png" PostBackUrl="~/Default.aspx" CssClass="linkhome"/>
+            <nav>
+                <h1>Criando Site ASP.NET (WebForms)</h1>
+                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="linkBotoes" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="linkBotoes" NavigateUrl="~/Usuario.aspx">Usuários</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink3" runat="server" CssClass="linkBotoes" NavigateUrl="~/Categoria.aspx">Categorias</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink4" runat="server" CssClass="linkBotoes" NavigateUrl="~/Autor.aspx">Autores</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink6" runat="server" CssClass="linkBotoes" NavigateUrl="~/Frase.aspx">Frases</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink5" runat="server" CssClass="linkBotoes" NavigateUrl="~/Login.aspx">Sair</asp:HyperLink>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <div id="cxFloatMsg" class="cxFloatMsg" onclick="HideMsg()">
+                    <h2 id="msgTitulo"> Mensagem Exibida</h2>
+                    <p id="msgTexto">Mensagem Exibida2</p>
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </main>
+        <footer>
+            <p>Back-End Frases - Site voltado para o adm do sistema.</p>
+        </footer>
+    </form>
+</body>
+</html>
